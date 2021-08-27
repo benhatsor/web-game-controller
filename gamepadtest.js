@@ -275,20 +275,24 @@ window.onload = () => {
           
           button.classList.remove('rumbling');
           
-          // if we just played the hardest rumble
-          if (button.classList.contains('godlike')) {
-            
-            document.querySelector('.footer').classList.add('fade');
-            
-            window.setTimeout(() => {
+          window.setTimeout(() => {
+
+            // if we just played the hardest rumble
+            if (button.classList.contains('godlike')) {
+
+              document.querySelector('.footer').classList.add('fade');
+
+              window.setTimeout(() => {
+
+                // be curious
+                document.querySelector('.footer .message').innerText =
+                    'Did I wreck your controller? Tweet me @barhatsor';
+
+                document.querySelector('.footer').classList.remove('fade');
+
+              }, 400);
               
-              // be curious
-              document.querySelector('.footer .message').innerText =
-                  'Did I wreck your controller? Tweet me @barhatsor';
-            
-              document.querySelector('.footer').classList.remove('fade');
-              
-            }, 400);
+            }, 1000);
             
           }
           
