@@ -94,7 +94,7 @@ function updateStatus() {
     var axes = d.getElementsByClassName("axis");
     */
     
-    if (print.innerText != gamepad.id) print.innerText = '';
+    if (print.innerText != controller.id) print.innerText = '';
     
     for (var i = 0; i < controller.axes.length; i++) {
       /*var a = axes[i];
