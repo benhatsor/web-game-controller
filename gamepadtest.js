@@ -169,15 +169,15 @@ var rumbleButtons;
 var vibrationPresets = {
   
   weak: {
-    duration: 500,
+    duration: 400,
     strongMagnitude: 0,
-    weakMagnitude: 0.5
+    weakMagnitude: 0.2
   },
   
   stronger: {
-    duration: 700,
-    strongMagnitude: 0.2,
-    weakMagnitude: 1
+    duration: 500,
+    strongMagnitude: 0,
+    weakMagnitude: 0.5
   },
   
   godlike: {
