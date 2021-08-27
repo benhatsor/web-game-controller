@@ -88,7 +88,7 @@ function updateStatus() {
       a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
       a.setAttribute("value", controller.axes[i]);
       
-      if (i == 0 || i == 1) {
+      if (i == 2 || i == 3) {
 
         if (controller.axes[i] > 0.5) {
           var dir = i;
