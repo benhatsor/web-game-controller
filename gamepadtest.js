@@ -57,6 +57,7 @@ function removegamepad(gamepad) {
   var d = document.getElementById("controller" + gamepad.index);
   document.body.removeChild(d);
   print.innerText = '';
+  print.style.background = '';
   delete controllers[gamepad.index];
 }
 
@@ -96,6 +97,8 @@ function updateStatus() {
     
     if (print.innerText != controller.id) print.innerText = '';
     
+    var emojiQuery = 'https://whatemoji.org/wp-content/uploads/2020/07/';
+    
     for (var i = 0; i < controller.axes.length; i++) {
       /*var a = axes[i];
       a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
@@ -124,7 +127,9 @@ function updateStatus() {
         }
         
       }
-        
+      
+      print.style.backgroundImage = 'url("' + emojiQuery + print.innerText + '-Arrow-Emoji.png")';
+      
     }
   }
   rAF(updateStatus);
