@@ -87,6 +87,13 @@ function updateStatus() {
       var a = axes[i];
       a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
       a.setAttribute("value", controller.axes[i]);
+      
+      if (controller.axes[i] > 0.5) {
+        var dir = i;
+        
+        console.log('Moved', dir);
+      }
+        
     }
   }
   rAF(updateStatus);
