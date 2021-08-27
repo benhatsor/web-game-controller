@@ -164,7 +164,7 @@ function scangamepads() {
 var startHeader;
 var statusHeader;
 var print;
-var vibrateButton;
+var rumbleButtons;
 
 var vibrationPresets = {
   
@@ -195,7 +195,7 @@ window.onload = () => {
   startHeader = document.querySelector('#start');
   statusHeader = document.querySelector('.status');
   print = document.querySelector('.print');
-  vibrateButton = document.querySelectorAll('.vibrate');
+  rumbleButtons = document.querySelectorAll('.rumble');
   
   if (haveEvents) {
     window.addEventListener("gamepadconnected", connecthandler);
@@ -205,9 +205,9 @@ window.onload = () => {
     window.addEventListener("webkitgamepaddisconnected", disconnecthandler);
   }
   
-  vibrateButton.forEach(button => {
+  rumbleButtons.forEach(button => {
     
-    button.addEventListener('click', () => {
+    button.addEventListener('click', async () => {
       
       // if controller is connected
       if (controllers[0]) {
@@ -225,14 +225,16 @@ window.onload = () => {
           
         } else {
           
-          vibrationEffect = vibrationPresets.normal;
+          vibrationEffect = vibrationPresets.weak;
           
         }
         
         // play vibration effect
         var gamepad = controllers[0];
         if (gamepad.vibrationActuator) {
-          gamepad.vibrationActuator.playEffect('dual-rumble', vibrationEffect);
+          button.classList.add('rumbling');
+          await gamepad.vibrationActuator.playEffect('dual-rumble', vibrationEffect);
+          button.classList.remove('rumbling');
         }
 
     });
