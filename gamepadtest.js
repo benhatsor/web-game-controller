@@ -67,10 +67,11 @@ function updateStatus() {
     var controller = controllers[j];
     var d = document.getElementById("controller" + j);
     
-    /*
-    var buttons = d.getElementsByClassName("button");
+    var emoji = '';
+    
+    //var buttons = d.getElementsByClassName("button");
     for (var i = 0; i < controller.buttons.length; i++) {
-      var b = buttons[i];
+      //var b = buttons[i];
       var val = controller.buttons[i];
       var pressed = val == 1.0;
       var touched = false;
@@ -81,22 +82,22 @@ function updateStatus() {
         }
         val = val.value;
       }
-      var pct = Math.round(val * 100) + "%";
-      b.style.backgroundSize = pct + " " + pct;
-      b.className = "button";
+      //var pct = Math.round(val * 100) + "%";
+      //b.style.backgroundSize = pct + " " + pct;
+      //b.className = "button";
       if (pressed) {
-        b.className += " pressed";
+        emoji = 'Backhand-Index-Pointing-Up';
+        //b.className += " pressed";
       }
       if (touched) {
-        b.className += " touched";
+        emoji = 'Pistol';
+        //b.className += " touched";
       }
     }
 
     var axes = d.getElementsByClassName("axis");
     */
     
-    var dir = '';
-      
     for (var i = 0; i < controller.axes.length; i++) {
       /*var a = axes[i];
       a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
@@ -105,12 +106,12 @@ function updateStatus() {
       if (i == 3 || i == 1) {
 
         if (controller.axes[i] < -0.5) {
-          dir = 'Up';
+          emoji = 'Up-Arrow';
           print.innerText = '';
         }
 
         if (controller.axes[i] > 0.5) {
-          dir = 'Down';
+          emoji = 'Down-Arrow';
           print.innerText = '';
         }
 
@@ -119,12 +120,12 @@ function updateStatus() {
       if (i == 2 || i == 0) {
 
         if (controller.axes[i] < -0.5) {
-          dir = 'Left';
+          emoji = 'Left-Arrow';
           print.innerText = '';
         }
 
         if (controller.axes[i] > 0.5) {
-          dir = 'Right';
+          emoji = 'Right-Arrow';
           print.innerText = '';
         }
 
@@ -134,9 +135,9 @@ function updateStatus() {
 
         var emojiQuery = 'https://whatemoji.org/wp-content/uploads/2020/07/';
 
-        if (dir != '') {
+        if (emoji != '') {
 
-          print.style.backgroundImage = 'url("' + emojiQuery + dir + '-Arrow-Emoji.png")';
+          print.style.backgroundImage = 'url("' + emojiQuery + emoji + '-Arrow-Emoji.png")';
 
         } else {
 
