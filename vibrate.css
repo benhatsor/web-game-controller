@@ -76,7 +76,7 @@ body {
 }
 
 .vibrate.mega:hover {
-  background: hsl(139,1*47.1%),33.3%);
+  background: hsl(139,47.1%,33.3%);
 }
 
 .vibrate.intense {
