@@ -94,9 +94,7 @@ function updateStatus() {
         if (pressed) {
           
           // if button is in ABXY range
-          if (i >= 0 && i > 4) {
-            
-            console.log(i);
+          if (i >= 0 && i < 4) {
             
             // show corresponding letter
             print.innerText = abxy[i];
@@ -127,8 +125,9 @@ function updateStatus() {
           
           // show emoji
           emoji = 'Play-Button';
+          print.innerText = '';
           
-        }  
+        }
         
       }
       
