@@ -97,10 +97,9 @@ function updateStatus() {
     
     if (print.innerText != controller.id) {
       
-      print.innerText = '';
-
       var emojiQuery = 'https://whatemoji.org/wp-content/uploads/2020/07/';
-
+      var dir = '';
+      
       for (var i = 0; i < controller.axes.length; i++) {
         /*var a = axes[i];
         a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
@@ -109,11 +108,11 @@ function updateStatus() {
         if (i == 3) {
 
           if (controller.axes[i] < -0.5) {
-            print.innerText = 'Up';
+            dir = 'Up';
           }
 
           if (controller.axes[i] > 0.5) {
-            print.innerText = 'Down';
+            dir = 'Down';
           }
 
         }
@@ -121,16 +120,20 @@ function updateStatus() {
         if (i == 2) {
 
           if (controller.axes[i] < -0.5) {
-            print.innerText = 'Left';
+            dir = 'Left';
           }
 
           if (controller.axes[i] > 0.5) {
-            print.innerText = 'Right';
+            dir = 'Right';
           }
 
         }
-
-        print.style.backgroundImage = 'url("' + emojiQuery + print.innerText + '-Arrow-Emoji.png")';
+        
+        if (dir != '') {
+          
+          print.style.backgroundImage = 'url("' + emojiQuery + dir + '-Arrow-Emoji.png")';
+          
+        }
         
       }
       
