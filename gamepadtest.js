@@ -178,6 +178,4 @@ if (haveEvents) {
 } else if (haveWebkitEvents) {
   window.addEventListener("webkitgamepadconnected", connecthandler);
   window.addEventListener("webkitgamepaddisconnected", disconnecthandler);
-} else {
-  setInterval(scangamepads, 500);
 }
