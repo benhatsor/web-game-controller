@@ -109,10 +109,12 @@ function updateStatus() {
 
           if (controller.axes[i] < -0.5) {
             dir = 'Up';
+            print.innerText = '';
           }
 
           if (controller.axes[i] > 0.5) {
             dir = 'Down';
+            print.innerText = '';
           }
 
         }
@@ -121,10 +123,12 @@ function updateStatus() {
 
           if (controller.axes[i] < -0.5) {
             dir = 'Left';
+            print.innerText = '';
           }
 
           if (controller.axes[i] > 0.5) {
             dir = 'Right';
+            print.innerText = '';
           }
 
         }
@@ -132,6 +136,10 @@ function updateStatus() {
         if (dir != '') {
           
           print.style.backgroundImage = 'url("' + emojiQuery + dir + '-Arrow-Emoji.png")';
+          
+        } else {
+          
+          print.style.backgroundImage = '';
           
         }
         
