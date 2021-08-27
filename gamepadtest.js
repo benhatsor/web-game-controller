@@ -102,7 +102,7 @@ function updateStatus() {
       a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
       a.setAttribute("value", controller.axes[i]);*/
 
-      if (i == 3) {
+      if (i == 3 || i == 1) {
 
         if (controller.axes[i] < -0.5) {
           dir = 'Up';
@@ -116,7 +116,7 @@ function updateStatus() {
 
       }
 
-      if (i == 2) {
+      if (i == 2 || i == 0) {
 
         if (controller.axes[i] < -0.5) {
           dir = 'Left';
