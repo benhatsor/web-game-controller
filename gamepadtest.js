@@ -7,6 +7,8 @@ var rAF = window.requestAnimationFrame;
 var print;
 
 function connecthandler(e) {
+  startHeader.classList = 'connected';
+  statusHeader.innerText = 'Controller connected';
   addgamepad(e.gamepad);
 }
 
@@ -17,8 +19,10 @@ function addgamepad(gamepad) {
   var t = document.createElement("h1");
   t.classList = 'print';
   print = t;
-  t.appendChild(document.createTextNode("gamepad: " + gamepad.id));
+  t.appendChild(document.createTextNode(gamepad.id));
   d.appendChild(t);
+  
+  /*
   var b = document.createElement("div");
   b.className = "buttons";
   for (var i = 0; i < gamepad.buttons.length; i++) {
@@ -43,11 +47,15 @@ function addgamepad(gamepad) {
   }
   d.appendChild(a);
   document.getElementById("start").style.display = "none";
+  */
+  
   document.body.appendChild(d);
   rAF(updateStatus);
 }
 
 function disconnecthandler(e) {
+  statusHeader.innerText = 'Controller disconnected';
+  startHeader.classList = 'disconnected';
   removegamepad(e.gamepad);
 }
 
@@ -61,6 +69,8 @@ function updateStatus() {
   scangamepads();
   for (j in controllers) {
     var controller = controllers[j];
+    
+    /*
     var d = document.getElementById("controller" + j);
     var buttons = d.getElementsByClassName("button");
     for (var i = 0; i < controller.buttons.length; i++) {
@@ -84,9 +94,12 @@ function updateStatus() {
       if (touched) {
         b.className += " touched";
       }
-    }
+    }*/
 
     var axes = d.getElementsByClassName("axis");
+    
+    print.innerText = '';
+    
     for (var i = 0; i < controller.axes.length; i++) {
       var a = axes[i];
       a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
@@ -130,10 +143,18 @@ function scangamepads() {
   }
 }
 
+var startHeader;
+var statusHeader;
+var vibrateButton;
+
 window.onload = () => {
   
-  var vibrateButton = document.querySelector('.vibrate');
-
+  document.body.classList.add('loaded');
+  
+  startHeader = document.querySelector('#start');
+  statusHeader = document.querySelector('.status');
+  vibrateButton = document.querySelector('.vibrate');
+  
   vibrateButton.addEventListener('click', () => {
 
     if (controllers[0]) {
