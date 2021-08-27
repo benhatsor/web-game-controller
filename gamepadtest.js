@@ -88,8 +88,7 @@ function updateStatus() {
       
       var abxy = ['a', 'b', 'x', 'y'];
       
-      // if button is not start button
-      if ((pressed || touched) && i != 9) {
+      if (pressed || touched) {
 
         if (pressed) {
           
@@ -106,6 +105,17 @@ function updateStatus() {
             emoji = 'Pistol';
             print.innerText = '';
             
+          } else if (i == 9) { // if button is start button
+            
+            // if not logging in
+            if (print.innerText != controller.id) {
+
+              // show emoji
+              emoji = 'Play-Button';
+              print.innerText = '';
+
+            }
+            
           } else {
             
             emoji = 'Backhand-Index-Pointing-Up';
@@ -116,17 +126,6 @@ function updateStatus() {
         } else if (touched) {
           
           emoji = 'Index-Pointing-Up';
-          print.innerText = '';
-          
-        }
-        
-      } else if (i == 9) { // if button is start button
-        
-        // if not logging in
-        if (print.innerText != controller.id) {
-          
-          // show emoji
-          emoji = 'Play-Button';
           print.innerText = '';
           
         }
