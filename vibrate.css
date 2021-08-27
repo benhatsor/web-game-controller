@@ -3,6 +3,13 @@
 @font-face {
   font-size: normal;
   font-weight: normal;
+  font-family: 'Ginto';
+  src: url('/ABCGintoNormal-Regular.woff');
+}
+
+@font-face {
+  font-size: normal;
+  font-weight: normal;
   font-family: 'Whitney';
   src: url('/whitneybook.woff');
 }
@@ -13,6 +20,11 @@ body {
   font-family: 'Whitney', system-ui, sans-serif;
   user-select: none;
   -webkit-user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
 #start {
