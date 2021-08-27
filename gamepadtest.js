@@ -4,8 +4,6 @@ var haveWebkitEvents = 'WebKitGamepadEvent' in window;
 var controllers = {};
 var rAF = window.requestAnimationFrame;
 
-var print;
-
 function connecthandler(e) {
   startHeader.classList = 'connected';
   statusHeader.innerText = 'Controller connected';
@@ -16,12 +14,8 @@ function addgamepad(gamepad) {
   controllers[gamepad.index] = gamepad;
   var d = document.createElement("div");
   d.setAttribute("id", "controller" + gamepad.index);
-  var t = document.createElement("h1");
-  t.classList = 'print';
-  print = t;
-  t.appendChild(document.createTextNode(gamepad.id));
-  d.appendChild(t);
-  
+  print.innerText = gamepad.id;
+    
   /*
   var b = document.createElement("div");
   b.className = "buttons";
@@ -62,6 +56,7 @@ function disconnecthandler(e) {
 function removegamepad(gamepad) {
   var d = document.getElementById("controller" + gamepad.index);
   document.body.removeChild(d);
+  print.innerText = '';
   delete controllers[gamepad.index];
 }
 
@@ -69,9 +64,9 @@ function updateStatus() {
   scangamepads();
   for (j in controllers) {
     var controller = controllers[j];
+    var d = document.getElementById("controller" + j);
     
     /*
-    var d = document.getElementById("controller" + j);
     var buttons = d.getElementsByClassName("button");
     for (var i = 0; i < controller.buttons.length; i++) {
       var b = buttons[i];
@@ -94,16 +89,17 @@ function updateStatus() {
       if (touched) {
         b.className += " touched";
       }
-    }*/
+    }
 
     var axes = d.getElementsByClassName("axis");
+    */
     
     print.innerText = '';
     
     for (var i = 0; i < controller.axes.length; i++) {
-      var a = axes[i];
+      /*var a = axes[i];
       a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
-      a.setAttribute("value", controller.axes[i]);
+      a.setAttribute("value", controller.axes[i]);*/
       
       if (i == 3) {
 
@@ -145,6 +141,7 @@ function scangamepads() {
 
 var startHeader;
 var statusHeader;
+var print;
 var vibrateButton;
 
 window.onload = () => {
@@ -153,6 +150,7 @@ window.onload = () => {
   
   startHeader = document.querySelector('#start');
   statusHeader = document.querySelector('.status');
+  print = document.querySelector('.print');
   vibrateButton = document.querySelector('.vibrate');
   
   vibrateButton.addEventListener('click', () => {
