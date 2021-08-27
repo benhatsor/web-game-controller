@@ -196,6 +196,12 @@ body {
   justify-content: center;
   grid-gap: 3px;
   text-decoration: none;
+  transition: .4s ease-in-out;
+}
+
+.footer.fade {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .footer:hover {
