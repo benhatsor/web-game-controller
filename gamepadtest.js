@@ -95,56 +95,57 @@ function updateStatus() {
     var axes = d.getElementsByClassName("axis");
     */
     
-    if (print.innerText != controller.id) {
+    var dir = '';
       
-      var emojiQuery = 'https://whatemoji.org/wp-content/uploads/2020/07/';
-      var dir = '';
-      
-      for (var i = 0; i < controller.axes.length; i++) {
-        /*var a = axes[i];
-        a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
-        a.setAttribute("value", controller.axes[i]);*/
+    for (var i = 0; i < controller.axes.length; i++) {
+      /*var a = axes[i];
+      a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
+      a.setAttribute("value", controller.axes[i]);*/
 
-        if (i == 3) {
+      if (i == 3) {
 
-          if (controller.axes[i] < -0.5) {
-            dir = 'Up';
-            print.innerText = '';
-          }
-
-          if (controller.axes[i] > 0.5) {
-            dir = 'Down';
-            print.innerText = '';
-          }
-
+        if (controller.axes[i] < -0.5) {
+          dir = 'Up';
+          print.innerText = '';
         }
 
-        if (i == 2) {
-
-          if (controller.axes[i] < -0.5) {
-            dir = 'Left';
-            print.innerText = '';
-          }
-
-          if (controller.axes[i] > 0.5) {
-            dir = 'Right';
-            print.innerText = '';
-          }
-
+        if (controller.axes[i] > 0.5) {
+          dir = 'Down';
+          print.innerText = '';
         }
-        
+
+      }
+
+      if (i == 2) {
+
+        if (controller.axes[i] < -0.5) {
+          dir = 'Left';
+          print.innerText = '';
+        }
+
+        if (controller.axes[i] > 0.5) {
+          dir = 'Right';
+          print.innerText = '';
+        }
+
+      }
+
+      if (print.innerText != controller.id) {
+
+        var emojiQuery = 'https://whatemoji.org/wp-content/uploads/2020/07/';
+
         if (dir != '') {
-          
+
           print.style.backgroundImage = 'url("' + emojiQuery + dir + '-Arrow-Emoji.png")';
-          
+
         } else {
-          
+
           print.style.backgroundImage = '';
-          
+
         }
         
       }
-      
+
     }
   }
   rAF(updateStatus);
