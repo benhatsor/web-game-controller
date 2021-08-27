@@ -96,6 +96,8 @@ function updateStatus() {
           // if button is in ABXY range
           if (i >= 0 && i > 4) {
             
+            console.log(i);
+            
             // show corresponding letter
             print.innerText = abxy[i];
             
