@@ -136,7 +136,7 @@ function updateStatus() {
 
         if (emoji != '') {
 
-          print.style.backgroundImage = 'url("' + emojiQuery + emoji + '-Arrow-Emoji.png")';
+          print.style.backgroundImage = 'url("' + emojiQuery + emoji + '-Emoji.png")';
 
         } else {
 
