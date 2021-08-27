@@ -85,15 +85,51 @@ function updateStatus() {
       //var pct = Math.round(val * 100) + "%";
       //b.style.backgroundSize = pct + " " + pct;
       //b.className = "button";
-      if (pressed) {
-        emoji = 'Backhand-Index-Pointing-Up';
-        print.innerText = '';
-        //b.className += " pressed";
-      } else if (touched) {
-        emoji = 'Pistol';
-        print.innerText = '';
-        //b.className += " touched";
+      
+      var abxy = ['a', 'b', 'x', 'y'];
+      
+      // if button is not start button
+      if (i != 9) {
+
+        if (pressed) {
+          
+          // if button is in ABXY range
+          if (i >= 0 && i > 4) {
+            
+            // show corresponding letter
+            print.innerText = abxy[i];
+            
+          } else if (i > 5 && i < 8) { // if button is a pressable button
+            
+            emoji = 'Pistol';
+            print.innerText = '';
+            
+          } else {
+            
+            emoji = 'Backhand-Index-Pointing-Up';
+            print.innerText = '';
+            
+          }
+          
+        } else if (touched) {
+          
+          emoji = 'Index-Pointing-Up';
+          print.innerText = '';
+          
+        }
+        
+      } else { // if button is start button
+        
+        // if not logging in
+        if (print.innerText != controller.id) {
+          
+          // show emoji
+          emoji = 'Play-Button';
+          
+        }  
+        
       }
+      
     }
     
     
