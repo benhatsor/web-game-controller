@@ -4,6 +4,8 @@ var haveWebkitEvents = 'WebKitGamepadEvent' in window;
 var controllers = {};
 var rAF = window.requestAnimationFrame;
 
+var print;
+
 function connecthandler(e) {
   addgamepad(e.gamepad);
 }
@@ -13,6 +15,8 @@ function addgamepad(gamepad) {
   var d = document.createElement("div");
   d.setAttribute("id", "controller" + gamepad.index);
   var t = document.createElement("h1");
+  t.classList = 'print';
+  print = t;
   t.appendChild(document.createTextNode("gamepad: " + gamepad.id));
   d.appendChild(t);
   var b = document.createElement("div");
@@ -88,18 +92,26 @@ function updateStatus() {
       a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
       a.setAttribute("value", controller.axes[i]);
       
-      if (i == 2 || i == 3) {
-
-        if (controller.axes[i] > 0.5) {
-          var dir = i;
-
-          console.log('Moved+ ', dir);
-        }
+      if (i == 3) {
 
         if (controller.axes[i] < -0.5) {
-          var dir = i;
+          print.innerText = 'Up';
+        }
+        
+        if (controller.axes[i] > 0.5) {
+          print.innerText = 'Down';
+        }
+        
+      }
+      
+      if (i == 2) {
 
-          console.log('Moved- ', dir);
+        if (controller.axes[i] < -0.5) {
+          print.innerText = 'Left';
+        }
+        
+        if (controller.axes[i] > 0.5) {
+          print.innerText = 'Right';
         }
         
       }
