@@ -89,7 +89,7 @@ function updateStatus() {
       var abxy = ['a', 'b', 'x', 'y'];
       
       // if button is not start button
-      if (i != 9) {
+      if ((pressed || touched) && i != 9) {
 
         if (pressed) {
           
