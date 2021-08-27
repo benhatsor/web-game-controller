@@ -91,7 +91,13 @@ function updateStatus() {
       if (controller.axes[i] > 0.5) {
         var dir = i;
         
-        console.log('Moved', dir);
+        console.log('Moved+ ', dir);
+      }
+      
+      if (controller.axes[i] < -0.5) {
+        var dir = i;
+        
+        console.log('Moved- ', dir);
       }
         
     }
