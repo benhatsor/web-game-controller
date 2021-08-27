@@ -169,9 +169,9 @@ var rumbleButtons;
 var vibrationPresets = {
   
   weak: {
-    duration: 400,
+    duration: 300,
     strongMagnitude: 0,
-    weakMagnitude: 0.2
+    weakMagnitude: 0.1
   },
   
   stronger: {
