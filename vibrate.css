@@ -139,3 +139,7 @@ body {
 body.loaded .splash {
   display: none;
 }
+
+.emojis {
+  display: none;
+}
