@@ -106,7 +106,15 @@ body {
 }
 
 .rumble.rumbling {
-  animation: rumble 1s ease infinite;
+  animation: rumble .47s step-end infinite;
+}
+
+.rumble.double.rumbling {
+  animation-duration: .2s;
+}
+
+.rumble.godlike.rumbling {
+  animation-duration: .05s;
 }
 
 .rumble.double {
