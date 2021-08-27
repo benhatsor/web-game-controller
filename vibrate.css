@@ -124,3 +124,7 @@ body {
   background: #282a2e;
   z-index: 100000;
 }
+
+body.loaded .splash {
+  display: none;
+}
