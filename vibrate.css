@@ -67,7 +67,7 @@ body {
   background-size: contain;
 }
 
-.vibrate {
+.rumble {
   background: #4f545c;
   /* background: hsl(139,47.3%,43.9%); */
   color: #f6f6f7;
@@ -97,32 +97,32 @@ body {
   transition: .17s ease, 0s transform;
 }
 
-.vibrate:active {
+.rumble:active {
   transform: translateY(1px);
 }
 
-.vibrate:hover {
+.rumble:hover {
   background: #5d6269;
 }
 
-.vibrate.mega {
+.rumble.double {
   background: hsl(139,47.3%,43.9%);
   color: #fff;
   box-shadow: 0 4px 4px rgb(0 0 0 / 16%);
 }
 
-.vibrate.mega:hover {
+.rumble.double:hover {
   background: hsl(139,47.1%,33.3%);
 }
 
-.vibrate.intense {
+.rumble.godlike {
   background: hsl(359,82.6%,59.4%);
   color: #fff;
   box-shadow: 0 8px 16px rgb(0 0 0 / 24%);
   text-transform: uppercase;
 }
 
-.vibrate.intense:hover {
+.rumble.godlike:hover {
   background: hsl(359,56.7%,48%);
 }
 
