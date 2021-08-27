@@ -88,16 +88,20 @@ function updateStatus() {
       a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
       a.setAttribute("value", controller.axes[i]);
       
-      if (controller.axes[i] > 0.5) {
-        var dir = i;
+      if (i == 0 || i == 1) {
+
+        if (controller.axes[i] > 0.5) {
+          var dir = i;
+
+          console.log('Moved+ ', dir);
+        }
+
+        if (controller.axes[i] < -0.5) {
+          var dir = i;
+
+          console.log('Moved- ', dir);
+        }
         
-        console.log('Moved+ ', dir);
-      }
-      
-      if (controller.axes[i] < -0.5) {
-        var dir = i;
-        
-        console.log('Moved- ', dir);
       }
         
     }
