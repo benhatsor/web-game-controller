@@ -86,7 +86,7 @@ function updateStatus() {
       //b.style.backgroundSize = pct + " " + pct;
       //b.className = "button";
       
-      var abxy = ['a', 'b', 'x', 'y'];
+      var abxy = ['[A]', '[B]', '[X]', '[Y]'];
       
       if (pressed || touched) {
 
