@@ -1,6 +1,16 @@
+/* ❤️ Inspired by @discord's easter egg */
+
+@font-face {
+	font-size: normal;
+	font-weight: normal;
+	font-family: 'Whitney';
+	src: url('/whitneybook.woff');
+}
+
 body {
   background: #282a2e;
   color: #dcddde;
+  font-family: 'Whitney', system-ui, sans-serif;
   user-select: none;
   -webkit-user-select: none;
 }
