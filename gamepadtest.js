@@ -166,6 +166,28 @@ var statusHeader;
 var print;
 var vibrateButton;
 
+var vibrationPresets = {
+  
+  weak: {
+    duration: 500,
+    strongMagnitude: 0,
+    weakMagnitude: 0.5
+  },
+  
+  stronger: {
+    duration: 700,
+    strongMagnitude: 0.2,
+    weakMagnitude: 1
+  },
+  
+  godlike: {
+    duration: 1000,
+    strongMagnitude: 1,
+    weakMagnitude: 1
+  },
+  
+}
+
 window.onload = () => {
   
   document.body.classList.add('loaded');
@@ -173,7 +195,7 @@ window.onload = () => {
   startHeader = document.querySelector('#start');
   statusHeader = document.querySelector('.status');
   print = document.querySelector('.print');
-  vibrateButton = document.querySelector('.vibrate');
+  vibrateButton = document.querySelectorAll('.vibrate');
   
   if (haveEvents) {
     window.addEventListener("gamepadconnected", connecthandler);
@@ -183,20 +205,37 @@ window.onload = () => {
     window.addEventListener("webkitgamepaddisconnected", disconnecthandler);
   }
   
-  vibrateButton.addEventListener('click', () => {
+  vibrateButton.forEach(button => {
+    
+    button.addEventListener('click', () => {
+      
+      // if controller is connected
+      if (controllers[0]) {
+        
+        var vibrationEffect;
+        
+        // load a vibration preset
+        if (button.classList.contains('godlike')) {
+          
+          vibrationEffect = vibrationPresets.godlike;
+          
+        } else if (button.classList.contains('double')) {
+          
+          vibrationEffect = vibrationPresets.stronger;
+          
+        } else {
+          
+          vibrationEffect = vibrationPresets.normal;
+          
+        }
+        
+        // play vibration effect
+        var gamepad = controllers[0];
+        if (gamepad.vibrationActuator) {
+          gamepad.vibrationActuator.playEffect('dual-rumble', vibrationEffect);
+        }
 
-    if (controllers[0]) {
-
-      var gamepad = controllers[0];
-      if (gamepad.vibrationActuator) {
-        gamepad.vibrationActuator.playEffect("dual-rumble", {
-            duration: 1000,
-            strongMagnitude: 1.0,
-            weakMagnitude: 1.0
-        });
-      }
-
-    }
+    });
 
   });
   
