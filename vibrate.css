@@ -1,0 +1,81 @@
+body {
+  background: #282a2e;
+  color: #dcddde;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.disconnected {
+  color: hsl(359,82.6%,59.4%);
+  font-size: 14px;
+  text-transform: uppercase;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  from, 49.99% {
+    opacity: 1;
+  }
+  50%, to {
+    opacity: 0;
+  }
+}
+
+.vibrate {
+  background: #4f545c;
+  /* background: hsl(139,47.3%,43.9%); */
+  color: #f6f6f7;
+  border-radius: 5px;
+  font-weight: 500;
+  line-height: 16px;
+  max-width: 190px;
+  margin: 14px 10px;
+  cursor: pointer;
+  padding: 12px 14px;
+  height: 32px;
+  min-width: 60px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 0 rgb(4 4 5 / 20%), 0 1.5px 0 rgb(6 6 7 / 5%), 0 2px 0 rgb(4 4 5 / 5%);
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  padding: 2px 16px;
+  text-rendering: optimizeLegibility;
+  height: 38px;
+  min-width: 96px;
+  min-height: 38px;
+  transition: .17s ease, 0s transform;
+}
+
+.vibrate:active {
+  transform: translateY(1px);
+}
+
+.vibrate:hover {
+  background: #5d6269;
+}
+
+.vibrate.mega {
+  background: hsl(139,47.3%,43.9%);
+  color: #fff;
+  box-shadow: 0 4px 4px rgb(0 0 0 / 16%);
+}
+
+.vibrate.mega:hover {
+  background: hsl(139,1*47.1%),33.3%);
+}
+
+.vibrate.intense {
+  background: hsl(359,82.6%,59.4%);
+  color: #fff;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 24%);
+  text-transform: uppercase;
+}
+
+.vibrate.mega:hover {
+  background: hsl(359,56.7%,48%);
+}
