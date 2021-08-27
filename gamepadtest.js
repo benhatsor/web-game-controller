@@ -87,10 +87,11 @@ function updateStatus() {
       //b.className = "button";
       if (pressed) {
         emoji = 'Backhand-Index-Pointing-Up';
+        print.innerText = '';
         //b.className += " pressed";
-      }
-      if (touched) {
+      } else if (touched) {
         emoji = 'Pistol';
+        print.innerText = '';
         //b.className += " touched";
       }
     }
