@@ -236,6 +236,8 @@ window.onload = () => {
           await gamepad.vibrationActuator.playEffect('dual-rumble', vibrationEffect);
           button.classList.remove('rumbling');
         }
+        
+      }
 
     });
 
