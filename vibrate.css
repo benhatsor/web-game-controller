@@ -106,7 +106,8 @@ body {
 }
 
 .rumble.rumbling {
-  animation: rumble .47s step-end infinite;
+  animation: rumble step-end infinite;
+  animation-duration: .4s;
 }
 
 .rumble.double.rumbling {
