@@ -6,4 +6,6 @@ As of now, there is no organized documentation of the APIs mentioned above. This
 
 So if you wanted to have some controller action in your web game, I hope I made your day a little bit better :)
 
+---
+
 Originally a fork of Ted Mielczarek.
