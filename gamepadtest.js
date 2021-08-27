@@ -177,7 +177,7 @@ var vibrationPresets = {
   stronger: {
     duration: 500,
     strongMagnitude: 0,
-    weakMagnitude: 0.5
+    weakMagnitude: 0.14
   },
   
   godlike: {
