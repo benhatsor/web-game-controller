@@ -153,6 +153,14 @@ window.onload = () => {
   print = document.querySelector('.print');
   vibrateButton = document.querySelector('.vibrate');
   
+  if (haveEvents) {
+    window.addEventListener("gamepadconnected", connecthandler);
+    window.addEventListener("gamepaddisconnected", disconnecthandler);
+  } else if (haveWebkitEvents) {
+    window.addEventListener("webkitgamepadconnected", connecthandler);
+    window.addEventListener("webkitgamepaddisconnected", disconnecthandler);
+  }
+  
   vibrateButton.addEventListener('click', () => {
 
     if (controllers[0]) {
@@ -170,12 +178,4 @@ window.onload = () => {
 
   });
   
-}
-
-if (haveEvents) {
-  window.addEventListener("gamepadconnected", connecthandler);
-  window.addEventListener("gamepaddisconnected", disconnecthandler);
-} else if (haveWebkitEvents) {
-  window.addEventListener("webkitgamepadconnected", connecthandler);
-  window.addEventListener("webkitgamepaddisconnected", disconnecthandler);
 }
