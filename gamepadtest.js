@@ -130,23 +130,27 @@ function scangamepads() {
   }
 }
 
-var vibrateButton = document.querySelector('.vibrate');
-
-vibrateButton.onclick = () => {
+window.onload = () => {
   
-  if (controllers.length > 0) {
-    
-    var gamepad = controllers[0];
-    if (gamepad.vibrationActuator) {
-      gamepad.vibrationActuator.playEffect("dual-rumble", {
-          duration: 1000,
-          strongMagnitude: 1.0,
-          weakMagnitude: 1.0
-      });
-    }
-    
-  }
+  var vibrateButton = document.querySelector('.vibrate');
 
+  vibrateButton.onclick = () => {
+
+    if (controllers.length > 0) {
+
+      var gamepad = controllers[0];
+      if (gamepad.vibrationActuator) {
+        gamepad.vibrationActuator.playEffect("dual-rumble", {
+            duration: 1000,
+            strongMagnitude: 1.0,
+            weakMagnitude: 1.0
+        });
+      }
+
+    }
+
+  }
+  
 }
 
 if (haveEvents) {
