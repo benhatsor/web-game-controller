@@ -196,7 +196,7 @@ body {
   justify-content: center;
   grid-gap: 3px;
   text-decoration: none;
-  transition: .4s ease-in-out;
+  transition: .4s ease-in-out, 0s color;
 }
 
 .footer.fade {
