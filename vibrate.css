@@ -2,9 +2,9 @@
 
 @font-face {
   font-size: normal;
-  font-weight: normal;
+  font-weight: 600;
   font-family: 'Ginto';
-  src: url('/ABCGintoNormal-Regular.woff');
+  src: url('/ABCGintoNormal-Medium.woff');
 }
 
 @font-face {
