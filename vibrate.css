@@ -207,6 +207,16 @@ body {
   text-decoration: underline;
 }
 
+.footer .link {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  z-index: 1;
+}
+
 .splash {
   position: fixed;
   left: 0;
