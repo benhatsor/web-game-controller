@@ -134,9 +134,9 @@ window.onload = () => {
   
   var vibrateButton = document.querySelector('.vibrate');
 
-  vibrateButton.onclick = () => {
+  vibrateButton.addEventListener('click', () => {
 
-    if (controllers.length > 0) {
+    if (controllers[0]) {
 
       var gamepad = controllers[0];
       if (gamepad.vibrationActuator) {
@@ -147,7 +147,7 @@ window.onload = () => {
         });
       }
 
-    }
+    });
 
   }
   
