@@ -1,4 +1,4 @@
-/* ❤️ Inspired by @discord's easter egg */
+/* Inspired by @discord's easter egg ❤️ */
 
 @font-face {
   font-size: normal;
@@ -182,6 +182,24 @@ body {
 #start.connected ~ .buttons {
   opacity: 1;
   pointer-events: auto;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 20px;
+  color: #72767d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 3px;
+  text-decoration: none;
+}
+
+.footer:hover {
+  text-decoration: underline;
 }
 
 .splash {
