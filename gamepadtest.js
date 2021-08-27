@@ -95,8 +95,6 @@ function updateStatus() {
           // if button is in ABXY range
           if (i >= 0 && i < 4) {
             
-            console.log(i);
-            
             // show corresponding letter
             print.innerText = abxy[i];
             
@@ -270,9 +268,30 @@ window.onload = () => {
         // play vibration effect
         var gamepad = controllers[0];
         if (gamepad.vibrationActuator) {
+          
           button.classList.add('rumbling');
+          
           await gamepad.vibrationActuator.playEffect('dual-rumble', vibrationEffect);
+          
           button.classList.remove('rumbling');
+          
+          // if we just played the hardest rumble
+          if (button.classList.contains('godlike')) {
+            
+            document.querySelector('.footer').classList.add('fade');
+            
+            window.setTimeout(() => {
+              
+              // be curious
+              document.querySelector('.footer .message').innerText =
+                  'Did I wreck your controller? Tweet me @barhatsor';
+            
+              document.querySelector('.footer').classList.remove('fade');
+              
+            }, 400);
+            
+          }
+          
         }
         
       }
