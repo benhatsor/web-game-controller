@@ -61,6 +61,12 @@ body {
   margin-top: -6px;
 }
 
+.print[style]:not([style='']) {
+  min-height: 32px;
+  min-width: 32px;
+  background-size: contain;
+}
+
 .vibrate {
   background: #4f545c;
   /* background: hsl(139,47.3%,43.9%); */
