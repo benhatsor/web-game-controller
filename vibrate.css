@@ -39,11 +39,11 @@ body {
   animation: blink 2s linear infinite backwards;
 }
 
-.connected {
+#start.connected {
   animation: none;
 }
 
-.disconnected {
+#start.disconnected {
   color: hsl(38, 95.7%, 54.1%);
 }
 
