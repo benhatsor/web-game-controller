@@ -56,6 +56,11 @@ body {
   }
 }
 
+.print {
+  margin-bottom: 20px;
+  margin-top: -6px;
+}
+
 .vibrate {
   background: #4f545c;
   /* background: hsl(139,47.3%,43.9%); */
