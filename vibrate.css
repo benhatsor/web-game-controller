@@ -172,6 +172,17 @@ body {
   }
 }
 
+.buttons {
+  opacity: .72;
+  pointer-events: none;
+  transition: .17s ease;
+}
+
+#start.connected ~ .buttons {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .splash {
   position: fixed;
   left: 0;
