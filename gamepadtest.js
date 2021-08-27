@@ -130,9 +130,9 @@ function scangamepads() {
   }
 }
 
-var vibrate = document.querySelector('.vibrate');
+var vibrateButton = document.querySelector('.vibrate');
 
-vibrate.onclick = () => {
+vibrateButton.onclick = () => {
   
   if (controllers.length > 0) {
     
