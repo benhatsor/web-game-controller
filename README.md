@@ -1,9 +1,9 @@
-This is a simple demo of using the [Gamepad API](http://www.w3.org/TR/gamepad/) in JavaScript. It attempts to account for differences in implementations of the unfinished spec, as well as Chrome's prefixed implementation.
+# Rumble rumble
 
-Gamepad API Test
+This is a project that attempts to make the [Gamepad API](http://www.w3.org/TR/gamepad/) and [Gamepad Haptics API](https://docs.google.com/document/d/1jPKzVRNzzU4dUsvLpSXm1VXPQZ8FP-0lKMT-R_p-s6g) in JavaScript accesible and easier to use.
 
-Written in 2013 by Ted Mielczarek <ted@mielczarek.org>
+As of now, there is no organized documentation of the APIs mentioned above. This project attempts to gather all the info available from W3C drafts and put it into action.
 
-To the extent possible under law, the author(s) have dedicated all copyright and related and neighboring rights to this software to the public domain worldwide. This software is distributed without any warranty.
+So if you wanted to have some controller action in your web game, I hope I made your day a little bit better :)
 
-You should have received a copy of the CC0 Public Domain Dedication along with this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
+Originally a fork of Ted Mielczarek.
