@@ -48,10 +48,10 @@ body {
 }
 
 @keyframes blink {
-  from, 49.99% {
+  from, 49%, to {
     opacity: 1;
   }
-  50%, to {
+  50%, 99% {
     opacity: 0;
   }
 }
