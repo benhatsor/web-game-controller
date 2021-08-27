@@ -35,6 +35,7 @@ body {
   margin-top: -10px;
   font-weight: 600;
   margin-bottom: 20px;
+  color: #fff;
   font-family: 'Ginto', system-ui, sans-serif;
   animation: blink 2s linear infinite backwards;
 }
@@ -215,6 +216,17 @@ body {
   bottom: 0;
   display: block;
   z-index: 1;
+}
+
+.github {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  color: #b9bbbe;
+  background: #202225;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
 }
 
 .splash {
