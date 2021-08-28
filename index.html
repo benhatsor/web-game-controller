@@ -35,7 +35,7 @@
   <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" fill="currentColor"></path></svg>
 </div>
 
-<div class="dialog-wrapper">
+<div class="dialog-wrapper visible">
   <div class="dialog">
     <div class="dialog-header">
       <div class="dialog-title">Connect a controller</div>
@@ -45,15 +45,42 @@
     </div>
     <div class="dialog-content">
       <div class="dialog-radiogroup">
-        <!-- yeah, xbox is better -->
-        <div class="dialog-radio radio-selected">
+        <div class="radio-box checked">
+          <svg aria-hidden="false" width="24" height="24" viewBox="0 0 24 24" class="radio-button">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+              fill="currentColor"
+            ></path>
+            <circle cx="12" cy="12" r="5" class="radio-fill" fill="currentColor"></circle>
+          </svg>
           <a>Xbox</a>
         </div>
-        <div class="dialog-radio">
+        <div class="radio-box">
+          <svg aria-hidden="false" width="24" height="24" viewBox="0 0 24 24" class="radio-button">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+              fill="currentColor"
+            ></path>
+            <circle cx="12" cy="12" r="5" class="radio-fill" fill="currentColor"></circle>
+          </svg>
           <a>PlayStation</a>
         </div>
       </div>
-      <div class="dialog-container">Video</div>
+      <div class="dialog-video-container">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/jlvHkxW1oa4?controls=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen=""
+        ></iframe>
+      </div>
     </div>
     <div class="dialog-footer"><div class="button primary">Done</div></div>
   </div>
