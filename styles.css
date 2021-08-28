@@ -175,14 +175,11 @@ body {
 }
 
 .buttons {
-  opacity: .72;
-  pointer-events: none;
-  transition: .17s ease;
+  display: none;
 }
 
 #start.connected ~ .buttons {
-  opacity: 1;
-  pointer-events: auto;
+  display: block;
 }
 
 .footer {
