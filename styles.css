@@ -103,6 +103,7 @@ body {
   height: 38px;
   min-width: 96px;
   min-height: 38px;
+  box-sizing: border-box;
   transition: .17s ease, 0s transform;
 }
 
