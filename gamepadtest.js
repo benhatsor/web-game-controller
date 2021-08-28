@@ -199,7 +199,7 @@ var vibrationPresets = {
   
 }
 
-window.onload = () => {
+window.onloadedmetadata = () => {
   
   document.body.classList.add('loaded');
   
