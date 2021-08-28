@@ -335,6 +335,10 @@ body.loaded .dialog {
   font-weight: 500;
 }
 
+.button.primary:hover {
+  background: hsl(139,47.1%,33.3%);
+}
+
 .dialog-content {
   padding-left: 16px;
   padding-right: 16px;
