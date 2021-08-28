@@ -5,8 +5,12 @@ var controllers = {};
 var rAF = window.requestAnimationFrame;
 
 function connecthandler(e) {
+  
   startHeader.classList = 'connected';
   statusHeader.innerText = 'Controller connected';
+  
+  helpButton.style.display = 'none;
+  
   addgamepad(e.gamepad);
 }
 
@@ -15,33 +19,6 @@ function addgamepad(gamepad) {
   var d = document.createElement("div");
   d.setAttribute("id", "controller" + gamepad.index);
   print.innerText = gamepad.id;
-    
-  /*
-  var b = document.createElement("div");
-  b.className = "buttons";
-  for (var i = 0; i < gamepad.buttons.length; i++) {
-    var e = document.createElement("span");
-    e.className = "button";
-    //e.id = "b" + i;
-    e.innerHTML = i;
-    b.appendChild(e);
-  }
-  d.appendChild(b);
-  var a = document.createElement("div");
-  a.className = "axes";
-  for (i = 0; i < gamepad.axes.length; i++) {
-    e = document.createElement("meter");
-    e.className = "axis";
-    //e.id = "a" + i;
-    e.setAttribute("min", "-1");
-    e.setAttribute("max", "1");
-    e.setAttribute("value", "0");
-    e.innerHTML = i;
-    a.appendChild(e);
-  }
-  d.appendChild(a);
-  document.getElementById("start").style.display = "none";
-  */
   
   document.body.appendChild(d);
   rAF(updateStatus);
@@ -69,22 +46,23 @@ function updateStatus() {
     
     var emoji = '';
     
-    //var buttons = d.getElementsByClassName("button");
     for (var i = 0; i < controller.buttons.length; i++) {
-      //var b = buttons[i];
+      
       var val = controller.buttons[i];
       var pressed = val == 1.0;
       var touched = false;
+      
       if (typeof(val) == "object") {
+        
         pressed = val.pressed;
         if ('touched' in val) {
           touched = val.touched;
         }
         val = val.value;
+        
       }
-      //var pct = Math.round(val * 100) + "%";
-      //b.style.backgroundSize = pct + " " + pct;
-      //b.className = "button";
+      
+      var pct = Math.round(val * 100) + "%";
       
       var abxy = ['[A]', '[B]', '[X]', '[Y]'];
       
@@ -133,11 +111,7 @@ function updateStatus() {
     }
     
     
-    //var axes = d.getElementsByClassName("axis");
     for (var i = 0; i < controller.axes.length; i++) {
-      /*var a = axes[i];
-      a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
-      a.setAttribute("value", controller.axes[i]);*/
 
       if (i == 3 || i == 1) {
 
@@ -200,6 +174,7 @@ function scangamepads() {
 var startHeader;
 var statusHeader;
 var print;
+var helpButton;
 var rumbleButtons;
 
 var vibrationPresets = {
@@ -231,6 +206,7 @@ window.onload = () => {
   startHeader = document.querySelector('#start');
   statusHeader = document.querySelector('.status');
   print = document.querySelector('.print');
+  helpButton = document.querySelector('.help');
   rumbleButtons = document.querySelectorAll('.rumble');
   
   if (haveEvents) {
@@ -275,33 +251,17 @@ window.onload = () => {
           
           button.classList.remove('rumbling');
           
-          window.setTimeout(() => {
-
-            // if we just played the hardest rumble
-            if (button.classList.contains('godlike')) {
-
-              document.querySelector('.footer').classList.add('fade');
-
-              window.setTimeout(() => {
-
-                // be curious
-                document.querySelector('.footer .message').innerText =
-                    'Did I wreck your controller? Tweet me @barhatsor';
-
-                document.querySelector('.footer').classList.remove('fade');
-
-              }, 400);
-              
-            }
-            
-          }, 1000);
-          
         }
         
       }
 
     });
 
+  });
+  
+  
+  // when clicked on help button
+  helpButton.addEventListener('click', () => {
   });
   
 }
