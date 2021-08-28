@@ -267,9 +267,14 @@ body {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: transform;
   transform: scale(0.72);
   opacity: 0;
+}
+
+.body.loaded .dialog {
+  transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-property: transform, opacity;
 }
 
 .dialog-wrapper.visible .dialog {
