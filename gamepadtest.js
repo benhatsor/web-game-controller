@@ -250,6 +250,7 @@ window.onload = () => {
 
   });
   
+  helpButton = document.querySelector('.help'),
   
   // when clicked on help button
   helpButton.addEventListener('click', () => {
