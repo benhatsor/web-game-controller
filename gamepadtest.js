@@ -9,7 +9,7 @@ function connecthandler(e) {
   startHeader.classList = 'connected';
   statusHeader.innerText = 'Controller connected';
   
-  helpButton.style.display = 'none;
+  helpButton.style.display = 'none';
   
   addgamepad(e.gamepad);
 }
