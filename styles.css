@@ -267,7 +267,6 @@ body {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  will-change: transform;
   transform: scale(0.72);
   opacity: 0;
 }
