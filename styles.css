@@ -243,9 +243,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: hsla(0, 0%, 0%, 0.85);
   z-index: 1002;
   flex-direction: column;
+  transition: background 0.2s ease;
+  pointer-events: none;
+  background: transparent;
+  pointer-events: none;
+}
+
+.dialog-wrapper.visible {
+  background: hsla(0, 0%, 0%, 0.85);
+  pointer-events: auto;
 }
 
 .dialog {
@@ -259,6 +267,14 @@ body {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: scale(0.72);
+  opacity: 0;
+}
+
+.dialog-wrapper.visible .dialog {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .dialog .dialog-header {
