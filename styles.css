@@ -294,6 +294,7 @@ body.loaded .dialog {
   overflow-x: hidden;
   position: relative;
   display: flex;
+  align-items: center;
 }
 
 .dialog-title {
