@@ -339,15 +339,58 @@ body.loaded .dialog {
   background: hsl(139,47.1%,33.3%);
 }
 
-.dialog-content {
-  padding-left: 16px;
-  padding-right: 16px;
-  flex: 1 1 auto;
-}
-
 .dialog-footer .button {
   margin: 0;
   width: auto;
+  box-shadow: none;
+}
+
+.dialog-content {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  overflow-y: auto;
+  flex: 1 1 auto;
+}
+
+.dialog-radiogroup {
+  margin-bottom: 40px;
+}
+
+.radio-box {
+  background-color: #2f3136;
+  color: #b9bbbe;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  padding: 10px;
+  display: flex;
+  grid-gap: 8px;
+  align-items: center;
+}
+
+.radio-box.checked .radio-fill {
+  fill: hsl(139,47.3%,43.9%);
+}
+
+.radio-box:hover {
+  background-color: rgba(79,84,92,0.16);
+  color: #dcddde;
+}
+
+.radio-box:active {
+  background-color: rgba(79,84,92,0.24);
+  color: #fff;
+}
+
+.radio-box.checked {
+  background-color: #202225;
+  color: #fff;
+}
+
+.radio-box .radio-fill {
+  fill: transparent;
 }
 
 .splash {
