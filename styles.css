@@ -61,7 +61,7 @@ body {
 .print {
   margin-bottom: 20px;
   margin-top: -6px;
-  color: #8e9297;
+  color: #b9bbbe;
 }
 
 .print[style]:not([style='']) {
@@ -70,9 +70,8 @@ body {
   background-size: contain;
 }
 
-.rumble {
+.button {
   background: #4f545c;
-  /* background: hsl(139,47.3%,43.9%); */
   color: #f6f6f7;
   border-radius: 5px;
   font-weight: 500;
@@ -100,11 +99,11 @@ body {
   transition: .17s ease, 0s transform;
 }
 
-.rumble:active {
+.button:active {
   transform: translateY(1px);
 }
 
-.rumble:hover {
+.button:hover {
   background: #5d6269;
 }
 
@@ -224,7 +223,7 @@ body {
   left: 0;
   top: 0;
   padding: 20px;
-  color: #b9bbbe;
+  color: #8e9297;
   background: #202225;
   border-bottom-right-radius: 20px;
   cursor: pointer;
