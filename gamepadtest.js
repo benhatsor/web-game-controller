@@ -170,12 +170,12 @@ function scangamepads() {
   }
 }
 
-var startHeader = document.querySelector('#start'),
-    statusHeader = document.querySelector('.status'),
-    print = document.querySelector('.print'),
-    helpButton = document.querySelector('.help'),
-    dialog = document.querySelector('.dialog-wrapper'),
-    rumbleButtons = document.querySelectorAll('.rumble');
+var startHeader,
+    statusHeader,
+    print,
+    helpButton,
+    dialog,
+    rumbleButtons;
 
 var vibrationPresets = {
   
@@ -200,6 +200,13 @@ var vibrationPresets = {
 }
 
 window.onload = () => {
+  
+  startHeader = document.querySelector('#start');
+  statusHeader = document.querySelector('.status');
+  print = document.querySelector('.print');
+  helpButton = document.querySelector('.help');
+  dialog = document.querySelector('.dialog-wrapper');
+  rumbleButtons = document.querySelectorAll('.rumble');
   
   document.body.classList.add('loaded');
   
