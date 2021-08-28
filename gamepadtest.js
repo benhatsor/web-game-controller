@@ -1,6 +1,5 @@
 
 var haveEvents = 'GamepadEvent' in window;
-var haveWebkitEvents = 'WebKitGamepadEvent' in window;
 var controllers = {};
 var rAF = window.requestAnimationFrame;
 
@@ -171,11 +170,12 @@ function scangamepads() {
   }
 }
 
-var startHeader;
-var statusHeader;
-var print;
-var helpButton;
-var rumbleButtons;
+var startHeader = document.querySelector('#start'),
+    statusHeader = document.querySelector('.status'),
+    print = document.querySelector('.print'),
+    helpButton = document.querySelector('.help'),
+    dialog = document.querySelector('.dialog-wrapper'),
+    rumbleButtons = document.querySelectorAll('.rumble');
 
 var vibrationPresets = {
   
@@ -203,18 +203,9 @@ window.onload = () => {
   
   document.body.classList.add('loaded');
   
-  startHeader = document.querySelector('#start');
-  statusHeader = document.querySelector('.status');
-  print = document.querySelector('.print');
-  helpButton = document.querySelector('.help');
-  rumbleButtons = document.querySelectorAll('.rumble');
-  
   if (haveEvents) {
     window.addEventListener("gamepadconnected", connecthandler);
     window.addEventListener("gamepaddisconnected", disconnecthandler);
-  } else if (haveWebkitEvents) {
-    window.addEventListener("webkitgamepadconnected", connecthandler);
-    window.addEventListener("webkitgamepaddisconnected", disconnecthandler);
   }
   
   rumbleButtons.forEach(button => {
@@ -262,6 +253,10 @@ window.onload = () => {
   
   // when clicked on help button
   helpButton.addEventListener('click', () => {
+    
+    // show dialog
+    dialog.classList.add('visible');
+    
   });
   
 }
