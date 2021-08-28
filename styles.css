@@ -245,18 +245,15 @@ body {
   justify-content: center;
   z-index: 1002;
   flex-direction: column;
-  transition: background 0.2s ease, 0s 0.2s opacity;
+  transition: background 0.2s ease;
   pointer-events: none;
   background: transparent;
   pointer-events: none;
-  opacity: 0;
 }
 
 .dialog-wrapper.visible {
   background: hsla(0, 0%, 0%, 0.85);
   pointer-events: auto;
-  opacity: 1;
-  transition: background 0.2s ease;
 }
 
 .dialog {
