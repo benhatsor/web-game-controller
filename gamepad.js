@@ -282,6 +282,38 @@ window.addEventListener('load', () => {
     
   });
   
+  // dialog radio buttons
+  
+  var dialogRadioButtons = dialog.querySelectorAll('.radio-box');
+  var dialogVideo = dialog.querySelector('.dialog-video-container iframe');
+  
+  // for each radio button
+  dialogRadioButtons.forEach(radioButton => {
+    
+    // when clicked on radio button
+    radioButton.addEventListener('click', () => {
+    
+      // uncheck other radio button
+      dialog.querySelector('.radio-box.checked').classList.remove('checked');
+      
+      // check this radio button
+      radioButton.classList.add('checked');
+      
+      // show respective video
+      if (radioButton.id = 'playstation') {
+        
+        dialogVideo.src = 'https://www.youtube-nocookie.com/embed/nUNY7WFA3_Q?controls=0';
+        
+      } else if (radioButton.id = 'xbox') {
+        
+        dialogVideo.src = 'https://www.youtube-nocookie.com/embed/7vaIKFavkJE?controls=0';
+        
+      }
+
+    });
+    
+  });
+  
   
   // fix page stutter on load  
   rAF(() => {
