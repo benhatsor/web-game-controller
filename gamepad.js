@@ -158,7 +158,7 @@ function updateStatus() {
         
         if (emoji != '') {
 
-          print.style.backgroundImage = 'url("/emojis/' + emoji + '-Emoji.png")';
+          print.style.backgroundImage = 'url("/emoji/' + emoji + '-Emoji.png")';
 
         } else {
 
