@@ -1,4 +1,4 @@
-# Web Game Controller
+# [🎮 Web Game Controller](https://gamepad.berryscript.com)
 
 This project attempts to make the [Gamepad API](http://www.w3.org/TR/gamepad/) and [Gamepad Haptics API](https://docs.google.com/document/d/1jPKzVRNzzU4dUsvLpSXm1VXPQZ8FP-0lKMT-R_p-s6g) in JavaScript accesible and easier to use.
 
