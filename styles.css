@@ -80,16 +80,9 @@ body {
 .button {
   background: #4f545c;
   color: #f6f6f7;
-  border-radius: 5px;
-  font-weight: 500;
-  line-height: 16px;
   max-width: 190px;
   margin: 14px 10px;
   cursor: pointer;
-  padding: 12px 14px;
-  height: 32px;
-  min-width: 60px;
-  min-height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
