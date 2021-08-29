@@ -289,7 +289,6 @@ body.loaded .dialog {
 .dialog :is(.dialog-header, .dialog-footer) {
   padding: 16px;
   z-index: 1;
-  overflow-x: hidden;
   position: relative;
   display: flex;
   align-items: center;
