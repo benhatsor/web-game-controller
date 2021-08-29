@@ -199,7 +199,7 @@ var vibrationPresets = {
   
 }
 
-window.onload = () => {
+window.addEventListener('load', () => {
   
   startHeader = document.querySelector('#start');
   statusHeader = document.querySelector('.status');
@@ -284,4 +284,4 @@ window.onload = () => {
     
   });
   
-}
+});
