@@ -97,7 +97,7 @@ function updateStatus() {
             
           } else if (i == 8) { // if pressed window button
             
-            emoji = '%E2%8A%9B-Window';
+            emoji = 'Window';
             print.innerText = '';
             
           } else if (i == 16) { // if pressed home button
@@ -155,12 +155,10 @@ function updateStatus() {
       }
 
       if (print.innerText != introTip) {
-
-        var emojiQuery = 'https://whatemoji.org/wp-content/uploads/2020/07/';
-
+        
         if (emoji != '') {
 
-          print.style.backgroundImage = 'url("' + emojiQuery + emoji + '-Emoji.png")';
+          print.style.backgroundImage = 'url("/emojis/' + emoji + '-Emoji.png")';
 
         } else {
 
