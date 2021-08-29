@@ -18,10 +18,10 @@ function addgamepad(gamepad) {
   var d = document.createElement("div");
   d.setAttribute("id", "controller" + gamepad.index);
   
-  print.innerText = gamepad.id;
+  //print.innerText = gamepad.id;
   window.setTimeout(() => {
     print.innerText = 'PROTIP: Press buttons on your controller.';
-  }, 1000);
+  }, 2000);
   
   document.body.appendChild(d);
   rAF(updateStatus);
