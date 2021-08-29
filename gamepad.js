@@ -207,9 +207,7 @@ window.addEventListener('load', () => {
   helpButton = document.querySelector('.help');
   dialog = document.querySelector('.dialog-wrapper');
   rumbleButtons = document.querySelectorAll('.rumble');
-  
-  document.body.classList.add('loaded');
-  
+    
   if (haveEvents) {
     window.addEventListener("gamepadconnected", connecthandler);
     window.addEventListener("gamepaddisconnected", disconnecthandler);
@@ -285,11 +283,9 @@ window.addEventListener('load', () => {
   });
   
   
-  // fix page load transitions
-  document.body.classList.add('notransition');
-  
+  // fix page stutter on load  
   rAF(() => {
-    document.body.classList.remove('notransition');
+    document.body.classList.add('loaded');
   });
   
 });
