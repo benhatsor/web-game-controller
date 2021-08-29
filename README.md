@@ -10,5 +10,4 @@ So if you wanted to have some controller action in your web game, I hope I made 
 
 A tool that really helped me out when putting this together is the [Gamepad API Test](https://luser.github.io/gamepadtest/) by [@luser](https://github.com/luser).
 
-#### License
-Use the code however you want, no attribution required, etc. See [LICENSE](https://github.com/barhatsor/gamepadtest/blob/master/LICENSE) for details.
+Code is pubilc domain.
