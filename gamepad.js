@@ -3,6 +3,8 @@ var haveEvents = 'GamepadEvent' in window;
 var controllers = {};
 var rAF = window.requestAnimationFrame;
 
+var introTip = 'PROTIP: Press buttons on your controller.';
+
 function connecthandler(e) {
   
   startHeader.classList = 'connected';
@@ -18,10 +20,8 @@ function addgamepad(gamepad) {
   var d = document.createElement("div");
   d.setAttribute("id", "controller" + gamepad.index);
   
-  //print.innerText = gamepad.id;
-  window.setTimeout(() => {
-    print.innerText = 'PROTIP: Press buttons on your controller.';
-  }, 2000);
+  // gamepad.id;
+  print.innerText = introTip;
   
   document.body.appendChild(d);
   rAF(updateStatus);
@@ -87,7 +87,7 @@ function updateStatus() {
           } else if (i == 9) { // if button is start button
             
             // if not logging in
-            if (print.innerText != controller.id) {
+            if (print.innerText != introTip) {
 
               // show emoji
               emoji = 'Play-Button';
@@ -144,7 +144,7 @@ function updateStatus() {
 
       }
 
-      if (print.innerText != controller.id) {
+      if (print.innerText != introTip) {
 
         var emojiQuery = 'https://whatemoji.org/wp-content/uploads/2020/07/';
 
