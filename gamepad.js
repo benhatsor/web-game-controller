@@ -97,7 +97,7 @@ function updateStatus() {
             
           } else if (i == 16) { // if pressed home button
             
-            emoji = 'Home';
+            emoji = 'House';
             print.innerText = '';
             
           } else {
