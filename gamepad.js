@@ -284,4 +284,12 @@ window.addEventListener('load', () => {
     
   });
   
+  
+  // fix page load transitions
+  document.body.classList.add('notransition');
+  
+  rAF(() => {
+    document.body.classList.remove('notransition');
+  });
+  
 });
