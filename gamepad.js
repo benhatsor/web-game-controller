@@ -302,11 +302,11 @@ window.addEventListener('load', () => {
       // show respective video
       if (radioButton.id == 'playstation') {
         
-        dialogVideo.src = 'https://www.youtube-nocookie.com/embed/nUNY7WFA3_Q?controls=0';
+        dialogVideo.src = 'https://www.youtube-nocookie.com/embed/nUNY7WFA3_Q';
         
       } else if (radioButton.id == 'xbox') {
         
-        dialogVideo.src = 'https://www.youtube-nocookie.com/embed/7vaIKFavkJE?controls=0';
+        dialogVideo.src = 'https://www.youtube-nocookie.com/embed/7vaIKFavkJE';
         
       }
 
