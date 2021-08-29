@@ -95,6 +95,11 @@ function updateStatus() {
 
             }
             
+          } else if (i == 8) { // if pressed window button
+            
+            emoji = '%E2%8A%9B-Window';
+            print.innerText = '';
+            
           } else if (i == 16) { // if pressed home button
             
             emoji = 'House';
