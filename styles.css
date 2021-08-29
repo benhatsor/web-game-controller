@@ -392,6 +392,11 @@ body.loaded .dialog {
   fill: transparent;
 }
 
+.dialog-video-container iframe {
+  border-radius: 3px;
+  width: 100%;
+}
+
 .splash {
   position: fixed;
   left: 0;
