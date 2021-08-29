@@ -246,7 +246,6 @@ body {
   z-index: 1002;
   flex-direction: column;
   transition: background 0.2s ease;
-  pointer-events: none;
   background: transparent;
   pointer-events: none;
 }
