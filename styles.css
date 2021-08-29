@@ -104,7 +104,7 @@ body {
   min-width: 96px;
   min-height: 38px;
   box-sizing: border-box;
-  transition: .17s ease, 0s transform;
+  transition: .17s ease background;
 }
 
 .button:active {
