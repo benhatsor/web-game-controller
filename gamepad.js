@@ -265,4 +265,23 @@ window.onload = () => {
     
   });
   
+  var dialogCloseButton = dialog.querySelector('.dialog-close');
+  var dialogDoneButton = dialog.querySelector('.dialog-done');
+  
+  // when clicked on close buttons, close dialog
+  
+  dialogCloseButton.addEventListener('click', () => {
+    
+    // close dialog
+    dialog.classList.remove('visible');
+    
+  });
+  
+  dialogDoneButton.addEventListener('click', () => {
+    
+    // close dialog
+    dialog.classList.remove('visible');
+    
+  });
+  
 }
