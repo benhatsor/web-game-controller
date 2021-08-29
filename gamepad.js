@@ -95,6 +95,11 @@ function updateStatus() {
 
             }
             
+          } else if (i == 16) { // if pressed home button
+            
+            emoji = 'Home';
+            print.innerText = '';
+            
           } else {
             
             emoji = 'Backhand-Index-Pointing-Up';
