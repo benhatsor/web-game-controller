@@ -10,6 +10,4 @@ So if you wanted to have some controller action in your web game, I hope I made 
 
 ---
 
-The [Gamepad API Test](https://luser.github.io/gamepadtest/) by [luser](https://github.com/luser) really helped me put this together.
-
-The styling is based off of [Discord's styling](https://discord.gg).
+The [Gamepad API Test](https://luser.github.io/gamepadtest/) by [luser](https://github.com/luser) was a great point of reference in putting this together.
